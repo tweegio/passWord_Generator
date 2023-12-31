@@ -1,0 +1,66 @@
+
+
+{% extends 'generator/layout.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+   
+</head>
+
+<div class="col-md-4 offset-md-4">
+
+{% block content %}
+<form action= "{% url 'password' %}" class="card card-body p-5" style="background-color:#121212;">
+<div>
+<h1 align="center">Password Generator</h1>
+</div>
+
+<div>
+<label for="length"> Select the length of your password: </label>
+<select name="length" id="length"  class="form-control">
+<option value="6">6 charaters</option>
+<option value="8">8 Charaters</option>
+<option value="10">10 Charaters</option>
+<option value="12">12 Charaters</option>
+<option value="14">14 Charaters</option>
+</select>
+</div>
+
+<br>
+<div>
+<label for="uppercase" class="col-md-4"> Uppercase </label>
+<input type="checkbox" name="uppercase" id="uppercase">
+</div>
+
+<br>
+<div>
+<label for="special" class="col-md-4">Special Characters</label>
+<input type="checkbox" name="special" id="special">
+</div>
+
+<br>
+<div>
+<label for="numbers" class="col-md-4">Numbers</label>
+<input type="checkbox" name="numbers" id="numbers">
+</div>
+
+
+<br>
+<button class="btn btn-primary">Generate Password</button>
+</form>
+
+
+{% endblock%}
+
+</div>
+
+
+
+
+</html>
